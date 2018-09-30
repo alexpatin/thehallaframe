@@ -4,7 +4,7 @@ a-scene{
   z-index: -1;
 }
 
-/**/
+/**/ 
 
 
 body{
@@ -12,7 +12,7 @@ body{
     /*margin: 0px;
     overflow: hidden;*/
 	color: #fff;
-	font-family: 'Arial',
+	font-family: 'Roboto Mono', monospace !important;
 }
 
 a:link, a:hover, a:visited, a:active {
@@ -25,13 +25,11 @@ a:link, a:hover, a:visited, a:active {
     width:100%;
     display: flex;
     justify-content: center;
-    margin-top: 15%;
 }
 
 .info{
-	font-family: Arial;
 	position:absolute;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -43,8 +41,7 @@ a:link, a:hover, a:visited, a:active {
     /*top: 50%;*/
     left: 50%;
     transform: translate(-50%, -0%);
-
-
+    height:100vh;
 }
 
 .info .company{
@@ -52,21 +49,32 @@ a:link, a:hover, a:visited, a:active {
 }
 
 .info .title{
-    font-size: 7em;
-    font-family: 'Poiret One', cursive;
+    font-size: 2.5em;
+    line-height:1em;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.title{
+    text-transform:uppercase;
+    letter-spacing:0.5rem;
 }
 
 .info .button{
     font-weight: bold;
-    background-color: limegreen;
+    background-color: #f05b73;
     padding: 10px;
     margin: 24px 0 0 0;
 }
 
 .info .instructions{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
     margin: 24px 0 0 0;
+}
+
+.logo{
+    margin-top:-10vh;
 }
 
 @media (max-width: 600px) {
