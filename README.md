@@ -1,14 +1,12 @@
-# The Hall VR
-
+# OtherWorld WebVR Gallery
 
 ![hallvr1](/screenshots/thehall1.jpg)
 
+The OtherWorld WebVR Gallery is a demo developed by Alex Patin and Chris Strachan to demonstrate what an OtherWorld Encounter Virtual Reality experience might entail.
 
-The Hall is a demo created in [Cecropia Solutions](http://www.cecropiasolutions.com/) to test the WebVR capabilities.
+The project has a variety of art items in display.
 
-The project has a variety of art items in display. Some custom, some of free access and use.
-
-This project is a revamp of our original Hall project [(https://github.com/Cecropia/thehallvr)](https://github.com/Cecropia/thehallvr) which is in its entirety a THREE.js project, we decided to migrate it to A-Frame to test its convenience against a stand-alone THREE.js app for VR and the results are superior. The most important part is that there's a default behavior such as controls across VR devices and compatibility that makes it easy to work with it.
+This project is a forked from [Cecropia Solutions'](http://www.cecropiasolutions.com/)  original Hall project [(https://github.com/Cecropia/thehallvr)](https://github.com/Cecropia/thehallvr).
 
 # Navigation
 
@@ -17,8 +15,6 @@ In this version, the main navigation is hand controls (Vive wands and Oculus Tou
 For desktop the traditional gaming controls are available (WASD, arrow keys and mouse).
 
 For mobile platforms (GearVR and Cardboard) Teleport Spots with a Gaze cursor are the way to jump to the several targets placed in the hall.
-
-
 
 
 # Development process
@@ -47,12 +43,7 @@ The compatibility in various devices is now handled by A-Frame, we previously ha
 Overall the migration was very transparent thanks to the previous THREE.js knowledge.
 
 
-
 [Live Demo](https://cecropia.github.io/thehallaframe/)
-
-
-[YouTube Video](https://www.youtube.com/watch?v=0nuiaWGNXAw)
-
 
 
 # Technologies used
