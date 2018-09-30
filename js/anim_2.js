@@ -68,7 +68,7 @@ AFRAME.registerComponent('anim_2', {
 
         this.pivot.add(this.strands);
 
-        this.pivot.position.set( -3, 2.2, -4.1);
+        this.pivot.position.set( -3.25, 2.1, -4.2);
         this.pivot.rotation.set( 0, 0, 1);
 
         this.pivot.scale.multiplyScalar(scale);
