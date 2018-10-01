@@ -1,10 +1,6 @@
-# OtherWorld WebVR Gallery
+# OtherWorld WebVR Maker's Faire Demo
 
-![hallvr1](/screenshots/thehall1.jpg)
-
-The OtherWorld WebVR Gallery is a demo developed by Alex Patin and Chris Strachan to demonstrate what an OtherWorld Encounter Virtual Reality experience might entail.
-
-The project has a variety of art items in display.
+The OtherWorld WebVR Maker's Faire demo is developed by Alex Patin and Chris Strachan to demonstrate what an OtherWorld Encounter Virtual Reality experience might entail.
 
 This project is a forked from [Cecropia Solutions'](http://www.cecropiasolutions.com/)  original Hall project [(https://github.com/Cecropia/thehallvr)](https://github.com/Cecropia/thehallvr).
 
