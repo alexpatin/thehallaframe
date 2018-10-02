@@ -44,8 +44,8 @@
     <div id="container" class="container">
       <div class="info">
         <div class="logo"><a href="http://www.otherworldencounter.com" target="_blank"><img src="img/owe-logo.png"></a></div>
-        <div class="title">The Laboratory </div>
-        <a class="button" id="start_experience" href="#">start experience</a>
+        <div class="title">Yottamachina </div>
+        <a class="button" id="start_experience" href="#">initialize</a>
         <div class="instructions">
           <div><strong>VR</strong>: Hand controllers and teleport with trigger.</div>
           <div><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
@@ -59,6 +59,11 @@
 
     <a-scene>
 
+        <a-camera>
+            <a-entity geometry="primitive: circle; height: 0.2; width: 0.2" position="0 0 -1"
+            material="color: gray; opacity: 0.5"></a-entity>
+        </a-camera>
+      
       <a-entity mobile></a-entity>
 
       <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
@@ -109,22 +114,22 @@
 
         <!-- acropolis -->
         <a-asset-item id="acropolis-obj" src="models/acropolis.obj"></a-asset-item>
-        <img id="acropolis-texture" src="textures/acropolis.jpg">
+        <img id="acropolis-texture" src="textures/slimey.jpg">
         <!-- - acropolis -->
 
         <!-- castle_lake -->
         <a-asset-item id="castle_lake-obj" src="models/castle_lake.obj"></a-asset-item>
-        <img id="castle_lake-texture" src="textures/castle_lake.jpg">
+        <img id="castle_lake-texture" src="textures/torus.gif">
         <!-- - castle_lake -->
 
         <!-- good_samaritan -->
         <a-asset-item id="good_samaritan-obj" src="models/good_samaritan.obj"></a-asset-item>
-        <img id="good_samaritan-texture" src="textures/good_samaritan.jpg">
+        <img id="good_samaritan-texture" src="textures/goddess.jpg">
         <!-- - good_samaritan -->
 
         <!-- moonlight -->
         <a-asset-item id="moonlight-obj" src="models/moonlight.obj"></a-asset-item>
-        <img id="moonlight-texture" src="textures/torus.gif">
+        <img id="moonlight-texture" src="textures/i.jpg">
         <!-- - moonlight -->
 
         <!-- podiums -->
