@@ -59,14 +59,14 @@
 
     <a-scene>
 
-        <a-camera>
+        <!--<a-camera>
             <a-entity geometry="primitive: circle; height: 0.2; width: 0.2" position="0 0 -1"
             material="color: gray; opacity: 0.5"></a-entity>
-        </a-camera>
+        </a-camera>-->
       
       <a-entity mobile></a-entity>
 
-      <a-entity light="type: directional; color: #FFF; intensity: 0.5" position="2 20 0"></a-entity>
+      <a-entity light="type: directional; color: #00FF00; intensity: 0.5" position="-1 1 0"></a-entity>
       <a-entity light="type: ambient; color: #FFF"></a-entity>
 
       <!-- Custom components with animations -->
@@ -81,7 +81,7 @@
         <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
 
 
-        <img id="sky_sphere-texture" src="textures/sky_sphere.jpg">
+        <!--<img id="sky_sphere-texture" src="textures/sky_sphere.jpg">-->
 
         <a-sound src="audio/84529__cmusounddesign__02-museum.ogg"
                  autoplay="true"
@@ -101,8 +101,9 @@
         <!-- - floor -->
 
         <!-- hall -->
-        <a-asset-item id="hall-obj" src="models/hall.obj"></a-asset-item>
-        <img id="hall-texture" src="textures/hall.jpg">
+        <a-asset-item id="hall-obj" src="models/vr_demo_wholescene.obj"></a-asset-item>
+        <a-asset-item id="hall-mtl" src="models/vr_demo_wholescene.mtl"></a-asset-item>
+        <!--<img id="hall-texture" src="textures/hall.jpg">-->
         <!--<img id="hall_normal-texture" src="textures/hall_normal.jpg">-->
         <!-- - hall -->
 
@@ -238,7 +239,7 @@
       <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
 
       <a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>
-      <a-entity obj-model="obj: #hall-obj;" material="src: #hall-texture" id="hall"></a-entity>
+      <a-entity obj-model="obj: #hall-obj; mtl: #hall-mtl;" material="" id="hall"></a-entity>
       <a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>
       <a-entity obj-model="obj: #acropolis-obj;" material="src: #acropolis-texture"></a-entity>
       <a-entity obj-model="obj: #castle_lake-obj;" material="src: #castle_lake-texture"></a-entity>
