@@ -8,9 +8,7 @@
     <meta property="og:url" content="https://alexpatin.github.io/thehallaframe/" />
     <meta property="og:image" content="https://alexpatin.github.io/thehallaframe/screenshots/thehall1.jpg" />
     <meta property="og:description" content="WebVR demo that displays art " />
-
     <meta name="twitter:card" content="summary_large_image">
-
     <meta name="twitter:title" content="OtherWorld WebVR Gallery">
     <meta name="twitter:description" content="WebVR demo that displays art ">
     <meta name="twitter:image" content="https://alexpatin.github.io/thehallaframe/screenshots/thehall1.jpg">
@@ -22,17 +20,13 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="https://rawgit.com/aframevr/aframe/37341be/dist/aframe-master.min.js"></script>
-    <script src="js/aframe-extras.min.js"></script>
-
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
     <script src="js/lzma.js"></script>
     <script src="js/aframe-teleport-controls.min.js"></script>
-    
     <script src="js/mobile_component.js"></script>
-
   </head>
-
   <body>
-
     <div id="container" class="container">
       <div class="info">
         <div class="logo"><a href="http://www.otherworldencounter.com" target="_blank"><img src="img/owe-logo.png"></a></div>
@@ -43,54 +37,31 @@
           <div><strong>Desktop</strong>: Keyboard (WASD/arrows) and mouse.</div>
           <div><strong>Mobile</strong>: Gaze cursor and teleportation.</div>
         </div>
-        
       </div>
     </div>
 
-    <!--<a-scene stats>-->
-
-    <a-scene>
-
-        <!--<a-camera>
-            <a-entity geometry="primitive: circle; height: 0.2; width: 0.2" position="0 0 -1"
-            material="color: gray; opacity: 0.5"></a-entity>
-        </a-camera>-->
-      
+    <a-scene stats>
       <a-entity mobile></a-entity>
-
       <a-entity light="type: directional; color: #0000FF; intensity: 0.5" position="-1 1 0"></a-entity>
       <a-entity light="type: ambient; color: #FFF"></a-entity>
-
+      <a-entity oculus-go-controls></a-entity>
 
       <a-assets>
         <a-mixin id="checkpoint"></a-mixin>
         <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
-
         <!--<img id="sky_sphere-texture" src="textures/sky_sphere.jpg">-->
-
         <a-sound src="audio/84529__cmusounddesign__02-museum.ogg"
                  autoplay="true"
                  loop="true"
                  position="1 1 0"></a-sound>
 
-
         <!-- whole scene -->
         <a-asset-item id="wholeSceneObj" src="models/vr_solo_test.obj"></a-asset-item>
         <a-asset-item id="wholeSceneMtl" src="models/vr_solo_test.mtl"></a-asset-item>
-
-
       </a-assets>
-
       <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
       <a-entity obj-model="obj: #wholeSceneObj; mtl: #wholeSceneMtl;" material="" id="wholeScene"></a-entity>
-      
-      <a-entity laser-controls="hand: left"></a-entity>
-      <a-entity laser-controls="hand: right"></a-entity>
-
     </a-scene>
-
     <script src="main.js"></script>
-
   </body>
-
 </html>
