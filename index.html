@@ -74,31 +74,16 @@
                  loop="true"
                  position="1 1 0"></a-sound>
 
-        <!-- floor 
-        <a-asset-item id="floor-obj" src="models/floor.obj"></a-asset-item>
-        <img id="floor-texture" src="textures/floor.jpg">
-        <img id="floor_normal-texture" src="textures/floor_normal.jpg">
-         - floor -->
 
-        <!-- hall -->
-        <a-asset-item id="hall-obj" src="models/vr_demo_wholescene.obj"></a-asset-item>
-        <a-asset-item id="hall-mtl" src="models/vr_demo_wholescene.mtl"></a-asset-item>
-        <!--<img id="hall-texture" src="textures/hall.jpg">-->
-        <!--<img id="hall_normal-texture" src="textures/hall_normal.jpg">-->
-        <!-- - hall -->
+        <!-- whole scene -->
+        <a-asset-item id="wholeSceneObj" src="models/vr_solo_test.obj"></a-asset-item>
+        <a-asset-item id="wholeSceneMtl" src="models/vr_solo_test.mtl"></a-asset-item>
 
-        <!-- hall low floor -->
-        <!-- this piece is only meant for teleportation -->
-        <a-asset-item id="hall_low_floor-obj" src="models/hall_low_floor.obj"></a-asset-item>
 
-        <!-- - hall low floor-->
       </a-assets>
 
       <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
-
-      <!--<a-entity obj-model="obj: #floor-obj;" material="src: #floor-texture; normalMap: #floor_normal-texture; metalness: 0.6" id="floor"></a-entity>-->
-      <a-entity obj-model="obj: #hall-obj; mtl: #hall-mtl;" material="" id="hall"></a-entity>
-      <a-entity obj-model="obj: #hall_low_floor-obj;" material="opacity: 0.0" id="hall_low_floor"></a-entity>
+      <a-entity obj-model="obj: #wholeSceneObj; mtl: #wholeSceneMtl;" material="" id="wholeScene"></a-entity>
       
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="left"></a-entity>
       <a-entity teleport-controls="button: trigger; collision-entities: #floor #hall_low_floor" hand-controls="right"></a-entity>
