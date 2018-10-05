@@ -20,9 +20,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="https://rawgit.com/aframevr/aframe/37341be/dist/aframe-master.min.js"></script>
+    <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.1.0/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/super-hands@3.0.0/dist/super-hands.min.js"></script>
-    <script src="js/lzma.js"></script>
+
     <script src="js/aframe-teleport-controls.min.js"></script>
     <script src="js/mobile_component.js"></script>
   </head>
@@ -41,26 +42,227 @@
     </div>
 
     <a-scene stats>
-      <a-entity mobile></a-entity>
-      <a-entity light="type: directional; color: #0000FF; intensity: 0.5" position="-1 1 0"></a-entity>
-      <a-entity light="type: ambient; color: #FFF"></a-entity>
-      <a-entity oculus-go-controls></a-entity>
+      <a-entity 
+        mobile>
+      </a-entity>
+      <a-entity 
+        light="type: directional; color: #0000FF; intensity: 0.5" 
+        position="-1 1 0">
+      </a-entity>
+      <a-entity 
+        light="type: ambient; color: #FFF">
+      </a-entity>
+      <a-entity 
+        oculus-go-controls>
+      </a-entity>
 
       <a-assets>
         <a-mixin id="checkpoint"></a-mixin>
         <a-mixin id="checkpoint-hovered" color="#6CEEB5"></a-mixin>
-        <!--<img id="sky_sphere-texture" src="textures/sky_sphere.jpg">-->
-        <a-sound src="audio/84529__cmusounddesign__02-museum.ogg"
-                 autoplay="true"
-                 loop="true"
-                 position="1 1 0"></a-sound>
-
-        <!-- whole scene -->
-        <a-asset-item id="wholeSceneObj" src="models/vr_solo_test.obj"></a-asset-item>
-        <a-asset-item id="wholeSceneMtl" src="models/vr_solo_test.mtl"></a-asset-item>
+        <!--<img 
+          id="sky_sphere-texture" 
+          src="textures/sky_sphere.jpg"
+        />-->
+        <a-sound 
+          src="audio/84529__cmusounddesign__02-museum.ogg"
+          autoplay="true"
+          loop="true"
+          position="1 1 0">
+        </a-sound>
+        <!-- bioFloor-->
+        <a-asset-item 
+          id="bioFloorObj" 
+          src="models/Bio_Floor.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bioFloorMtl" 
+          src="models/Bio_Floor.mtl">
+        </a-asset-item>
+        <!-- bioCeiling -->
+        <a-asset-item 
+          id="bioCeilingObj" 
+          src="models/Bio_Ceiling.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bioCeilingMtl" 
+          src="models/Bio_Ceiling.mtl">
+        </a-asset-item>
+        <!-- bioScreen -->
+        <a-asset-item 
+          id="bioScreenObj" 
+          src="models/Bio_Screen.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bioScreenMtl" 
+          src="models/Bio_Screen.mtl">
+        </a-asset-item>
+        <!-- bioPlantsA -->
+        <a-asset-item 
+          id="bioPlantsAObj" 
+          src="models/Bio_Plants_A.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bioPlantsAMtl" 
+          src="models/Bio_Plants_A.mtl">
+        </a-asset-item>
+        <!-- bioPlantADNU 
+        <a-asset-item 
+          id="bioPlantsADNUObj" 
+          src="models/Bio_Plants_A_DNU.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bioPlantsADNUMtl" 
+          src="models/Bio_Plants_A_DNU.mtl">
+        </a-asset-item>-->
+        <!-- bioVistaDirt -->
+        <a-asset-item 
+          id="bioVistaDirtObj" 
+          src="models/Bio_Vista_Dirt.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bioVistaDirtMtl" 
+          src="models/Bio_Vista_Dirt.mtl">
+        </a-asset-item>
+        <!-- bwA -->
+        <a-asset-item 
+          id="bwAObj" 
+          src="models/BW_A.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bwAMtl" 
+          src="models/BW_A.mtl">
+        </a-asset-item>
+        <!-- bwB -->
+        <a-asset-item 
+          id="bwBObj" 
+          src="models/BW_B.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bwBMtl" 
+          src="models/BW_B.mtl">
+        </a-asset-item>
+        <!-- bwC -->
+        <a-asset-item 
+          id="bwCObj" 
+          src="models/BW_C.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bwCMtl" 
+          src="models/BW_C.mtl">
+        </a-asset-item>
+        <!-- bwD -->
+        <a-asset-item 
+          id="bwDObj" 
+          src="models/BW_D.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bwDMtl" 
+          src="models/BW_D.mtl">
+        </a-asset-item>
+        <!-- bwE -->
+        <a-asset-item 
+          id="bwEObj" 
+          src="models/BW_E.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bwEMtl" 
+          src="models/BW_E.mtl">
+        </a-asset-item>
+        <!-- bwF -->
+        <a-asset-item 
+          id="bwFObj" 
+          src="models/BW_F.obj">
+        </a-asset-item>
+        <a-asset-item 
+          id="bwFMtl" 
+          src="models/BW_F.mtl">
+        </a-asset-item>
+        <!-- centerPillarLight-->
+        <a-asset-item
+          id="centerPillarLightObj"
+          src="models/Center_Pillar_Light.obj">
+        </a-asset-item>
+        <a-asset-item
+          id="centerPillarLightMtl"
+          src="models/Center_Pillar_Light.mtl">
+        </a-asset-item>
+        <!-- centerPillarMid-->
+        <a-asset-item
+          id="centerPillarMidObj"
+          src="models/Center_Pillar_Mid.obj">
+        </a-asset-item>
+        <a-asset-item
+          id="centerPillarMidMtl"
+          src="models/Center_Pillar_Mid.mtl">
+        </a-asset-item>
+        <!-- centerPillar-->
+        <a-asset-item
+          id="centerPillarObj"
+          src="models/Center_Pillar.obj">
+        </a-asset-item>
+        <a-asset-item
+          id="centerPillarMtl"
+          src="models/Center_Pillar.mtl">
+        </a-asset-item>
       </a-assets>
-      <a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>
-      <a-entity obj-model="obj: #wholeSceneObj; mtl: #wholeSceneMtl;" material="" id="wholeScene"></a-entity>
+      <!--<a-sky color="#EEEEFF" material="src: #sky_sphere-texture"></a-sky>-->
+
+      <a-entity
+        id="bioFloor"
+        obj-model="obj: #bioFloorObj; mtl: #bioFloorMtl;">
+      </a-entity>
+      <a-entity
+        id="bioCeiling"
+        obj-model="obj: #bioCeilingObj; mtl: #bioCeilingMtl;">
+      </a-entity>
+      <a-entity
+        id="bioScreen"
+        obj-model="obj: #bioScreenObj; mtl: #bioScreenMtl;">
+      </a-entity>
+      <a-entity
+        id="bioPlantsA"
+        obj-model="obj: #bioPlantsAObj; mtl: #bioPlantsAMtl;">
+      </a-entity>
+      <a-entity
+        id="bioVistaDirt"
+        obj-model="obj: #bioVistaDirtObj; mtl: #bioVistaDirtMtl;">
+      </a-entity>
+      <a-entity
+        id="bwA"
+        obj-model="obj: #bwAObj; mtl: #bwAMtl;">
+      </a-entity>
+      <a-entity
+        id="bwB"
+        obj-model="obj: #bwBObj; mtl: #bwBMtl;">
+      </a-entity>
+      <a-entity
+        id="bwC"
+        obj-model="obj: #bwCObj; mtl: #bwCMtl;">
+      </a-entity>
+      <a-entity
+        id="bwD"
+        obj-model="obj: #bwDObj; mtl: #bwDMtl;">
+      </a-entity>
+      <a-entity
+        id="bwE"
+        obj-model="obj: #bwEObj; mtl: #bwEMtl;">
+      </a-entity>
+      <a-entity
+        id="bwF"
+        obj-model="obj: #bwFObj; mtl: #bwFMtl;">
+      </a-entity>
+      <a-entity
+        id="centerPillarLight"
+        obj-model="obj: #centerPillarLightObj; mtl: #centerPillarLightMtl;">
+      </a-entity>
+      <a-entity
+        id="centerPillarMid"
+        obj-model="obj: #centerPillarMidObj; mtl: #centerPillarMidMtl;">
+      </a-entity>
+      <a-entity
+        id="centerPillar"
+        obj-model="obj: #centerPillarObj; mtl: #centerPillarMtl;">
+      </a-entity>
     </a-scene>
     <script src="main.js"></script>
   </body>
